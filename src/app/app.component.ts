@@ -19,14 +19,14 @@ export class AppComponent {
     { name: 'Kevin', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg' },
     { name: 'Carl', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg' },
     { name: 'Bob', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg' },
-    { name: 'Clemece', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg' },
+    { name: 'Clemence', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg' },
     { name: 'Richard', image: 'https://material.angular.io/assets/img/examples/shiba2.jpg' },
   ]
   readonly masonryLayoutBreakpointsMap: MasonryLayoutBreakpointsMap = {
     [Breakpoints.XSmall]: 1,
     [Breakpoints.Small]: 2,
-    [Breakpoints.Medium]: 3,
-    [Breakpoints.Large]: 4,
+    [Breakpoints.Medium]: 2,
+    [Breakpoints.Large]: 3,
     [unmatchedBreakpointKey]: 4,
   };
 }

@@ -1,5 +1,5 @@
 <div class="masonry-layout">
-  <div *ngFor="let column of columnItems$ | async" class="masonry-column">
+  <div *ngFor="let column of columnItems()" class="masonry-column">
     <ng-container *ngFor="let item of column">
       <ng-template [ngTemplateOutlet]="templateRef" [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
     </ng-container>
