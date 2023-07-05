@@ -8,8 +8,8 @@ describe('MasonryLayoutContainerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MasonryLayoutContainerComponent]
-    });
+    imports: [MasonryLayoutContainerComponent]
+});
     fixture = TestBed.createComponent(MasonryLayoutContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

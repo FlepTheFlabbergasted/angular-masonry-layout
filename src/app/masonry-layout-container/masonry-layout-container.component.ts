@@ -10,6 +10,7 @@ import {
   TemplateRef,
 } from '@angular/core';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
+import { NgFor, NgTemplateOutlet, AsyncPipe } from '@angular/common';
 
 export const unmatchedBreakpointKey = 'other';
 export type MasonryLayoutBreakpointKeys = keyof typeof Breakpoints | typeof unmatchedBreakpointKey;
@@ -18,10 +19,16 @@ export type MasonryLayoutBreakpointsMap = Partial<Record<MasonryLayoutBreakpoint
 // See https://benjamin-maisonneuve1.medium.com/multiple-content-projections-in-angular-cc65f72ba519
 // Also maybe use this if needed: https://stackoverflow.com/a/71443793
 @Component({
-  selector: 'app-masonry-layout-container',
-  templateUrl: './masonry-layout-container.component.html',
-  styleUrls: ['./masonry-layout-container.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-masonry-layout-container',
+    templateUrl: './masonry-layout-container.component.html',
+    styleUrls: ['./masonry-layout-container.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgFor,
+        NgTemplateOutlet,
+        AsyncPipe,
+    ],
 })
 export class MasonryLayoutContainerComponent implements OnChanges, OnDestroy {
   @Input() items: unknown[] = [];
